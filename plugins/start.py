@@ -1,7 +1,3 @@
-# Copyright (c) 2025 devgagan : https://github.com/devgaganin.  
-# Licensed under the GNU General Public License v3.0.  
-# See LICENSE file in the repository root for full license text.
-
 from shared_client import app
 from pyrogram import filters
 from pyrogram.errors import UserNotParticipant
@@ -9,12 +5,11 @@ from pyrogram.types import BotCommand, InlineKeyboardButton, InlineKeyboardMarku
 from config import LOG_GROUP, OWNER_ID, FORCE_SUB
 
 async def subscribe(app, message):
-    # return 0
     if FORCE_SUB:
         try:
           user = await app.get_chat_member(FORCE_SUB, message.from_user.id)
           if str(user.status) == "ChatMemberStatus.BANNED":
-              await message.reply_text("You are Banned. Contact -- Jassbeniwal")
+              await message.reply_text("You are Banned. Contact -- Team SPY")
               return 1
         except UserNotParticipant:
             link = await app.export_chat_invite_link(FORCE_SUB)
@@ -104,7 +99,7 @@ help_pages = [
         "> 4. REPLACEWORDS : Can be used for words in deleted set via REMOVE WORDS\n"
         "> 5. RESET : To set the things back to default\n\n"
         "> You can set CUSTOM THUMBNAIL, PDF WATERMARK, VIDEO WATERMARK, SESSION-based login, etc. from settings\n\n"
-        "**__Powered by Jassbeniwal__**"
+        "**__Powered by Team SPY__**"
     )
 ]
  
@@ -233,4 +228,5 @@ async def see_terms(client, callback_query):
     )
     await callback_query.message.edit_text(terms_text, reply_markup=buttons)
  
- 
+
+        
