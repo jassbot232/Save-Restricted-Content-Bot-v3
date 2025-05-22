@@ -167,7 +167,7 @@ async def terms(client, message):
     buttons = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("📋 See Plans", callback_data="see_plan")],
-            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/Jashanbeniwa")],
+            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/Jashanbeniwal")],
         ]
     )
     await message.reply_text(terms_text, reply_markup=buttons)
@@ -186,7 +186,7 @@ async def plan(client, message):
     buttons = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("📜 See Terms", callback_data="see_terms")],
-            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/Jashanbeniwa")],
+            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/Jashanbeniwal")],
         ]
     )
     await message.reply_text(plan_text, reply_markup=buttons)
@@ -205,7 +205,7 @@ async def see_plan(client, callback_query):
     buttons = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("📜 See Terms", callback_data="see_terms")],
-            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/Jashanbeniwa")],
+            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/Jashanbeniwal")],
         ]
     )
     await callback_query.message.edit_text(plan_text, reply_markup=buttons)
@@ -223,10 +223,9 @@ async def see_terms(client, callback_query):
     buttons = InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("📋 See Plans", callback_data="see_plan")],
-            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/Jashanbeniwa")],
+            [InlineKeyboardButton("💬 Contact Now", url="https://t.me/Jashanbeniwal")],
         ]
     )
     await callback_query.message.edit_text(terms_text, reply_markup=buttons)
  
 
-        
