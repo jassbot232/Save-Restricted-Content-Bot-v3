@@ -9,6 +9,7 @@ from pyrogram.types import BotCommand, InlineKeyboardButton, InlineKeyboardMarku
 from config import LOG_GROUP, OWNER_ID, FORCE_SUB
 
 async def subscribe(app, message):
+    return 0
     if FORCE_SUB:
         try:
           user = await app.get_chat_member(FORCE_SUB, message.from_user.id)
