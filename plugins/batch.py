@@ -1,3 +1,7 @@
+# Copyright (c) 2025 devgagan : https://github.com/devgaganin.  
+# Licensed under the GNU General Public License v3.0.  
+# See LICENSE file in the repository root for full license text.
+
 import os, re, time, asyncio, json, asyncio 
 from pyrogram import Client, filters
 from pyrogram.types import Message
@@ -487,4 +491,3 @@ async def text_handler(c, m):
         finally:
             await remove_active_batch(uid)
             Z.pop(uid, None)
-        
